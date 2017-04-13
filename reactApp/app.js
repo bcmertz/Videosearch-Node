@@ -115,7 +115,7 @@ class Main extends React.Component {
           contentDisposition="auto"
           onFinish = {this.onFinish}
           scrubFilename={(filename) => filename.replace(/[^\w\d_\-\.]+/ig, '')}
-          server="http://localhost:3000" />
+          server="https://guarded-caverns-22086.herokuapp.com" />
         </div>
         <div style={{textAlign: 'center'}}>
           <form onSubmit = {this.getResult}>
