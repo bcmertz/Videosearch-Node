@@ -21,8 +21,7 @@ class Main extends React.Component {
     evt.preventDefault();
     var self = this
     console.log('stream', self.state.url)
-    // fetch('http://localhost:3000/stream',{
-    fetch('https://guarded-caverns-22086.herokuapp.com/stream',{
+    fetch('http://localhost:3000/stream',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -35,8 +34,7 @@ class Main extends React.Component {
   getResult(evt){
     evt.preventDefault();
     var self = this;
-    // fetch('http://localhost:3000/gameinfo')
-    fetch('https://guarded-caverns-22086.herokuapp.com/gameinfo')
+    fetch('http://localhost:3000/gameinfo')
     .then(function(response){
       return response.json()
     })
@@ -52,8 +50,7 @@ class Main extends React.Component {
   }
   onFinish(){
     var self = this;
-    // fetch('http://localhost:3000/uploadurl',{
-    fetch('https://guarded-caverns-22086.herokuapp.com/uploadurl',{
+    fetch('http://localhost:3000/uploadurl',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -115,7 +112,7 @@ class Main extends React.Component {
           contentDisposition="auto"
           onFinish = {this.onFinish}
           scrubFilename={(filename) => filename.replace(/[^\w\d_\-\.]+/ig, '')}
-          server="https://guarded-caverns-22086.herokuapp.com" />
+          server="http://localhost:3000" />
         </div>
         <div style={{textAlign: 'center'}}>
           <form onSubmit = {this.getResult}>
