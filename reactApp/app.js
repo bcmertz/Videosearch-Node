@@ -21,7 +21,8 @@ class Main extends React.Component {
     evt.preventDefault();
     var self = this
     console.log('stream', self.state.url)
-    fetch('http://localhost:3000/stream',{
+    // fetch('http://localhost:3000/stream',{
+    fetch('https://guarded-caverns-22086.herokuapp.com/stream',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -34,7 +35,8 @@ class Main extends React.Component {
   getResult(evt){
     evt.preventDefault();
     var self = this;
-    fetch('http://localhost:3000/gameinfo')
+    // fetch('http://localhost:3000/gameinfo')
+    fetch('https://guarded-caverns-22086.herokuapp.com/gameinfo')
     .then(function(response){
       return response.json()
     })
@@ -50,7 +52,8 @@ class Main extends React.Component {
   }
   onFinish(){
     var self = this;
-    fetch('http://localhost:3000/uploadurl',{
+    // fetch('http://localhost:3000/uploadurl',{
+    fetch('https://guarded-caverns-22086.herokuapp.com/uploadurl',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
