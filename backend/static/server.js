@@ -8,6 +8,7 @@ var app = express();
 // var io=require('socket.io').listen(server);
 
 app.use(express.static('build'));
+app.use(express.static(path.join(__dirname, 'static')));
 
 //middleware configured to use folder 'build' for static? script tags
 app.use(bodyParser.json());
