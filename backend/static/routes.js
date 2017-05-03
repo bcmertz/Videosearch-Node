@@ -8,7 +8,7 @@ var fileUpload = require('express-fileupload');
 var http = require('http');
 var aws = require('aws-sdk')
 var mongoose = require('mongoose')
-var models = require('../models/models.js')
+var models = require('../../models/models.js')
 var Frame = models.Frame;
 var Clarifai = require('clarifai');
 var youtubedl = require('youtube-dl')
@@ -26,7 +26,7 @@ var clari = new Clarifai.App(
 clari.getToken();
 
 router.get('/', function(req,res){
-  res.sendFile(path.join(__dirname, '../index.html'))  //for the mainpage send index.html which has out bundled app as a script inside
+  res.sendFile(path.join(__dirname, '../../index.html'))  //for the mainpage send index.html which has out bundled app as a script inside
 });  //get main page
 
 var ready = false  //global variable dictating if the results are ready or not yet, doens't scale to multiple users
