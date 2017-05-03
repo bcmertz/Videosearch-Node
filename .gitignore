@@ -11,4 +11,3 @@ configuration.py
 server.py.bak
 __pycache__
 components/
-build/
