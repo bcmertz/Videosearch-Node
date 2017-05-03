@@ -22,7 +22,7 @@ class Main extends React.Component {
     var self = this
     console.log('stream', self.state.url)
     // fetch('http://localhost:3000/stream',{
-    fetch('https://guarded-caverns-22086.herokuapp.com/stream',{
+    fetch('https://fierce-retreat-58228.herokuapp.com/stream',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -36,7 +36,7 @@ class Main extends React.Component {
     evt.preventDefault();
     var self = this;
     // fetch('http://localhost:3000/gameinfo')
-    fetch('https://guarded-caverns-22086.herokuapp.com/gameinfo')
+    fetch('https://fierce-retreat-58228.herokuapp.com/gameinfo')
     .then(function(response){
       return response.json()
     })
@@ -53,7 +53,7 @@ class Main extends React.Component {
   onFinish(){
     var self = this;
     // fetch('http://localhost:3000/uploadurl',{
-    fetch('https://guarded-caverns-22086.herokuapp.com/uploadurl',{
+    fetch('https://fierce-retreat-58228.herokuapp.com/uploadurl',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -115,7 +115,7 @@ class Main extends React.Component {
           contentDisposition="auto"
           onFinish = {this.onFinish}
           scrubFilename={(filename) => filename.replace(/[^\w\d_\-\.]+/ig, '')}
-          server="https://guarded-caverns-22086.herokuapp.com" />
+          server="https://fierce-retreat-58228.herokuapp.com" />
         </div>
         <div style={{textAlign: 'center'}}>
           <form onSubmit = {this.getResult}>
