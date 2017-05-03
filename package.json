@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
-    "start": "node ./backend/server.js",
+    "start": "node ./backend/static/server.js",
     "prod": "webpack -p"
   },
   "author": "",
