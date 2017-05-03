@@ -27736,7 +27736,7 @@ var Main = function (_React$Component) {
               if (responseJson.error) {
                 alert('Invalid URL, reload and try again'); //TODO make more elegant
                 clearInterval(check);
-              } else if (timenow >= 120000) {
+              } else if (timenow >= 240000) {
                 alert('Process failed, reload and try again'); //TODO make more elegant
                 clearInterval(check);
               }
