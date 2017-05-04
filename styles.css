@@ -5,8 +5,8 @@ body {
   justify-content: center;
 }
 p{
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
 h1{
@@ -16,6 +16,7 @@ h1{
   line-height: 1.25;
   font-weight: 300;
   color: #1D2A33;
+  text-align: center;
 }
 
 .cool{
