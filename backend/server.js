@@ -5,8 +5,6 @@ var fileUpload = require('express-fileupload');
 var routes = require('./routes');
 var app = express();
 
-// var io=require('socket.io').listen(server);
-
 app.use(express.static('build'));
 app.use(express.static(path.join(__dirname, 'static')));
 
