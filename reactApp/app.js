@@ -79,7 +79,7 @@ class Main extends React.Component {
     })
   }
   componentDidUpdate() {
-    var time = null
+    var time = null //yep
     var self = this
     if (self.state.predictions) { //search in array of classified images for search term occurence
       self.state.list.forEach(function(item){
