@@ -306,7 +306,7 @@ router.use('/s3', require('react-s3-uploader/s3router')({  //backend route neede
     bucket: "mybucket-bennettmertz",    //default bucket
     // region: 'us-west-1', //optional
     // signatureVersion: 'v4', //optional (use for some amazon regions: frankfurt and others)
-    headers: {'Access-Control-Allow-Origin': '*'}, // optional
+    headers: {'Access-Control-Allow-Origin': 'http://www.searchwithinvideo.com/'}, // optional
     ACL: 'public-read'
   })
 );
