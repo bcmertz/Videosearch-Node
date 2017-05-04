@@ -27696,7 +27696,7 @@ var Main = function (_React$Component) {
     value: function handleYoutube(link) {
       //if a youtube link is submitted, we send that link to the appropriate backend route
       var self = this;
-      fetch('https://fierce-retreat-58228.herokuapp.com/youtube', {
+      fetch('/youtube', {
         method: 'post',
         headers: {
           "Content-Type": "application/json"
@@ -27708,7 +27708,7 @@ var Main = function (_React$Component) {
         var timer = Date.now(); //assumes error and stops chekcing after a minute
         console.log('looking for result');
         var check = setInterval(function () {
-          fetch('https://fierce-retreat-58228.herokuapp.com/results').then(function (response) {
+          fetch('/results').then(function (response) {
             return response.json();
           }).then(function (responseJson) {
             console.log('checked');
@@ -27755,7 +27755,7 @@ var Main = function (_React$Component) {
     value: function handleMP4(url) {
       //if link submitted is an mp4, not finished route
       var self = this;
-      fetch('https://fierce-retreat-58228.herokuapp.com/uploadurl', {
+      fetch('/uploadurl', {
         method: 'post',
         headers: {
           "Content-Type": "application/json"
@@ -27766,7 +27766,7 @@ var Main = function (_React$Component) {
       }).then(function () {
         console.log('looking for result');
         var check = setInterval(function () {
-          fetch('https://fierce-retreat-58228.herokuapp.com/results').then(function (response) {
+          fetch('/results').then(function (response) {
             return response.json();
           }).then(function (responseJson) {
             //see youtube comments
@@ -27807,7 +27807,7 @@ var Main = function (_React$Component) {
       var tempUrl = signResult.publicUrl.slice(12, signResult.publicUrl.length);
       var url = 'https://s3-us-west-1.amazonaws.com/mybucket-bennettmertz/' + tempUrl;
       console.log('url', url);
-      fetch('https://fierce-retreat-58228.herokuapp.com/uploadurl', {
+      fetch('/uploadurl', {
         method: 'post',
         headers: {
           "Content-Type": "application/json"
@@ -27821,7 +27821,7 @@ var Main = function (_React$Component) {
         });
         console.log('looking for result');
         var check = setInterval(function () {
-          fetch('https://fierce-retreat-58228.herokuapp.com/results').then(function (response) {
+          fetch('/results').then(function (response) {
             return response.json();
           }).then(function (responseJson) {
             //see above comments in youtube upload
