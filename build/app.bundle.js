@@ -27892,8 +27892,8 @@ var Main = function (_React$Component) {
             preprocess: this.onStart.bind(this),
             scrubFilename: function scrubFilename(filename) {
               return filename.replace(/[^\w\d_\-\.]+/ig, '');
-            },
-            server: '//fierce-retreat-58228.herokuapp.com' })
+            }
+          })
         ) : _react2.default.createElement(
           'div',
           { style: { marginTop: 30 } },
