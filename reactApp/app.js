@@ -290,7 +290,7 @@ class Main extends React.Component {
           onFinish = {this.onFinish.bind(this)}
           preprocess = {this.onStart.bind(this)}
           scrubFilename={(filename) => filename.replace(/[^\w\d_\-\.]+/ig, '')}
-          server="https://fierce-retreat-58228.herokuapp.com" />
+          server="//fierce-retreat-58228.herokuapp.com" />
         </div>
         :
         <div style={{marginTop: 30}}>

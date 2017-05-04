@@ -27893,7 +27893,7 @@ var Main = function (_React$Component) {
             scrubFilename: function scrubFilename(filename) {
               return filename.replace(/[^\w\d_\-\.]+/ig, '');
             },
-            server: 'https://fierce-retreat-58228.herokuapp.com' })
+            server: '//fierce-retreat-58228.herokuapp.com' })
         ) : _react2.default.createElement(
           'div',
           { style: { marginTop: 30 } },
