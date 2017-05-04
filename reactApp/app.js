@@ -272,7 +272,7 @@ class Main extends React.Component {
     var counter = 0;
 
     return(
-      <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
+      <div style={{width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
         {!this.state.ready && !this.state.loading ? <div>
         <h1>SearchWithinVideo</h1>
         <p>Submit a youtube url or upload a video to get started</p>
