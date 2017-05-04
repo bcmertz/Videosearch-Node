@@ -27662,7 +27662,7 @@ var Main = function (_React$Component) {
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
-      var time = null;
+      var time = null; //yep
       var self = this;
       if (self.state.predictions) {
         //search in array of classified images for search term occurence
