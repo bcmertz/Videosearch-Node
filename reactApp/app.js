@@ -146,7 +146,7 @@ class Main extends React.Component {
             if (responseJson.error) {
               alert('Invalid URL, reload and try again')  //TODO make more elegant
               clearInterval(check)
-            } else if (timenow >= 240000) {
+            } else if (timenow >= 480000) {
               alert('Process failed, reload and try again')  //TODO make more elegant
               clearInterval(check)
             }
@@ -162,7 +162,7 @@ class Main extends React.Component {
       console.log(err);
     })
   }
-  handleMP4(url){ //if link submitted is an mp4, not finished route
+  handleMP4(url){ //if link submitted is an mp4
     var self = this
     fetch('/uploadurl',{
       method: 'post',
