@@ -6,8 +6,7 @@
   "scripts": {
     "webpack": "webpack",
     "start": "node ./backend/server.js",
-    "prod": "webpack -p",
-    "heroku-postbuild": "webpack -p"
+    "prod": "webpack -p"
   },
   "author": "",
   "license": "ISC",

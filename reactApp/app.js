@@ -160,7 +160,7 @@ class Main extends React.Component {
     })
     .catch(function(err){
       console.log(err);
-    })
+    }) 
   }
   handleMP4(url){ //if link submitted is an mp4
     var self = this
