@@ -7,7 +7,7 @@
     "webpack": "webpack",
     "start": "node ./backend/server.js",
     "prod": "webpack -p",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "heroku-postbuild": "webpack -p"
   },
   "author": "",
   "license": "ISC",
