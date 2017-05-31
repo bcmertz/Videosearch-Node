@@ -10736,8 +10736,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!./node_modules/css-loader/index.js?modules=true&localIdentName=[name]__[local]___[hash:base64:5]!./styles.css", function() {
-			var newContent = require("!!./node_modules/css-loader/index.js?modules=true&localIdentName=[name]__[local]___[hash:base64:5]!./styles.css");
+		module.hot.accept("!!../../node_modules/css-loader/index.js?modules=true&localIdentName=[name]__[local]___[hash:base64:5]!./styles.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js?modules=true&localIdentName=[name]__[local]___[hash:base64:5]!./styles.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -27976,11 +27976,12 @@ exports = module.exports = __webpack_require__(183)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  font-family: \"Helvetica Neue\",Helvetica,Arial,sans-serif;\n  color: #747b80;\n  display: flex;\n  justify-content: center;\n}\np{\n  margin-bottom: 20px;\n  font-size: 16px;\n}\n\nh1{\n  font-size: 36px;\n  letter-spacing: 0.5px;\n  margin-bottom: 20px;\n  line-height: 1.25;\n  font-weight: 300;\n  color: #1D2A33;\n  text-align: center;\n}\n\n.styles__cool___2Ae21{\n  width: 100%;\n  padding: 8px 0;\n  text-indent: 2%;\n  text-align: left;\n  border-radius: 3px;\n  border: 1px solid #ABB0B2;\n  height: 36px;\n}\n", ""]);
+exports.push([module.i, "html {\n  height: 100%;\n  box-sizing: border-box;\n}\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit;\n}\n\nbody {\n  font-family: \"Helvetica Neue\",Helvetica,Arial,sans-serif;\n  color: #747b80;\n  display: flex;\n  justify-content: center;\n  position: relative;\n  margin: 0;\n  padding-bottom: 6rem;\n  min-height: 100%;\n  font-family: \"Helvetica Neue\", Arial, sans-serif;\n}\n\n#styles__footer___3iG6P {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  padding: 1rem;\n  background-color: #efefef;\n  text-align: center;\n}\np{\n  margin-bottom: 20px;\n  font-size: 16px;\n}\n\nh1{\n  font-size: 36px;\n  letter-spacing: 0.5px;\n  margin-bottom: 20px;\n  line-height: 1.25;\n  font-weight: 300;\n  color: #1D2A33;\n  text-align: center;\n}\n\n.styles__cool___1mqxf{\n  width: 100%;\n  padding: 8px 0;\n  text-indent: 2%;\n  text-align: left;\n  border-radius: 3px;\n  border: 1px solid #ABB0B2;\n  height: 36px;\n}\n\n\n\n\n\n\n/*body {\n  font-family: \"Helvetica Neue\",Helvetica,Arial,sans-serif;\n  color: #747b80;\n  display: flex;\n  justify-content: center;\n}\np{\n  margin-bottom: 20px;\n  font-size: 16px;\n}\n\nh1{\n  font-size: 36px;\n  letter-spacing: 0.5px;\n  margin-bottom: 20px;\n  line-height: 1.25;\n  font-weight: 300;\n  color: #1D2A33;\n  text-align: center;\n}\n\n.cool{\n  width: 100%;\n  padding: 8px 0;\n  text-indent: 2%;\n  text-align: left;\n  border-radius: 3px;\n  border: 1px solid #ABB0B2;\n  height: 36px;\n}*/\n", ""]);
 
 // exports
 exports.locals = {
-	"cool": "styles__cool___2Ae21"
+	"footer": "styles__footer___3iG6P",
+	"cool": "styles__cool___1mqxf"
 };
 
 /***/ }),

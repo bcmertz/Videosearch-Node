@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import css from '../styles.css'
+import css from '../backend/static/styles.css'
 import ReactDOM from 'react-dom'
 import Button from 'react-bootstrap/lib/Button'
 var ReactS3Uploader = require('react-s3-uploader');
@@ -160,7 +160,7 @@ class Main extends React.Component {
     })
     .catch(function(err){
       console.log(err);
-    }) 
+    })
   }
   handleMP4(url){ //if link submitted is an mp4
     var self = this
