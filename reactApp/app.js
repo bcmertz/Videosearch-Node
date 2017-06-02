@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom'
 import Button from 'react-bootstrap/lib/Button'
 var ReactS3Uploader = require('react-s3-uploader');
 
-
 class Main extends React.Component {
   constructor() {
     super();
