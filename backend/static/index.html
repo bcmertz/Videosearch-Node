@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Search in Video</title>
+<head lang="en">
+  <title>VideoSearch</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -33,13 +33,27 @@
   <script src='/app.bundle.js'></script>
   <div id="footer">
     This website was build by
-    <a href="https://github.com/bcmertz" target="_blank">Bennett Mertz</a>
+    <a href="https://github.com/bcmertz" target="_blank" rel="noopener">Bennett Mertz</a>
     and
-    <a href="https://github.com/rajivpo" target="_blank">Rajiv Patel-O'Connor</a>. It is running on slow free tier EC2 servers so we recommend using a video 3 minutes or less in length. It was built using
-    <a href="https://facebook.github.io/react/"  target="_blank">React</a>, <a href="http://opencv.org/"  target="_blank">OpenCV</a>, <a href="https://clarifai.com/"  target="_blank">Clarifai</a>,
-    <a href="https://react-bootstrap.github.io/"  target="_blank">React-Bootstrap</a>, <a href="https://expressjs.com/"  target="_blank">Express</a>, <a href="https://www.mongodb.com/"  target="_blank">MongoDB</a>,
-    and is run on <a href="https://www.heroku.com/"  target="_blank">Heorku</a> and <a href="https://aws.amazon.com/
-  " target="_blank">AWS</a>. Click <a href="https://itunes.apple.com/app/id1228404743" target="_blank">here</a> for another cool project by this dynamic duo.
+    <a href="https://github.com/rajivpo" target="_blank" rel="noopener">Rajiv Patel-O'Connor</a>.
+    It is running on slow free tier EC2 servers so we recommend using a video 3 minutes or less in length. It was built using
+    <a href="https://facebook.github.io/react/"  target="_blank" rel="noopener">React</a>,
+    <a href="http://opencv.org/"  target="_blank" rel="noopener">OpenCV</a>,
+    <a href="https://clarifai.com/"  target="_blank" rel="noopener">Clarifai</a>,
+    <a href="https://react-bootstrap.github.io/"  target="_blank" rel="noopener">React-Bootstrap</a>,
+    <a href="https://expressjs.com/"  target="_blank" rel="noopener">Express</a>, <a href="https://www.mongodb.com/"  target="_blank" rel="noopener">
+      MongoDB</a>,
+    and is run on <a href="https://www.heroku.com/"  target="_blank" rel="noopener">Heorku</a> and
+    <a href="https://aws.amazon.com/
+  "target="_blank" rel="noopener">AWS</a>.
+  Click <a href="https://itunes.apple.com/app/id1228404743" target="_blank" rel="noopener">here</a> for another cool project by this dynamic duo.
   </div>
+  <script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('/sw.js')
+             .then(function() { console.log("Service Worker Registered"); });
+  }
+  </script>
 </body>
 </html>
