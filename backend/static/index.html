@@ -3,7 +3,7 @@
 <head lang="en">
   <title>VideoSearch</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap.min.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script>
@@ -27,10 +27,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<!-- <body style="background-color:#f9f9f9" -->
-<body style="background-image: url(background.png)">
+<body style="background-color:#f9f9f9"
   <div style={width: "100%"} id ='root'></div>
-  <script src='/app.bundle.js'></script>
+  <script src='/app.bundle.js.gz'></script>
   <div id="footer">
     This website was build by
     <a href="https://github.com/bcmertz" target="_blank" rel="noopener">Bennett Mertz</a>
@@ -50,9 +49,13 @@
   </div>
   <!-- <script>
   if('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('/sw.js')
-             .then(function() { console.log("Service Worker Registered"); });
+    navigator.serviceWorker.register('/sw.js')
+    .then(function(registration) {
+      // console.log('Service Worker Registered');
+    }).catch(function(err){console.log('err', err)});
+    navigator.serviceWorker.ready.then(function(registration) {
+      //  console.log('Service Worker Ready');
+    });
   }
   </script> -->
 </body>

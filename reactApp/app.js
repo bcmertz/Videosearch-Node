@@ -84,9 +84,9 @@ class Main extends React.Component {
     if (self.state.predictions) { //search in array of classified images for search term occurence
       self.state.list.forEach(function(item){
         if (item.toLowerCase() === self.state.query.toLowerCase()) {
-          time = self.state.predictions[item][self.state.index]
-          console.log('Found search term, displaying results', time, 'item array', self.state.predictions[item])
-          document.getElementById("uploadedvideo").currentTime=time
+          time = self.state.predictions[item][self.state.index];
+          console.log('Found search term, displaying results', time, 'item array', self.state.predictions[item]);
+          document.getElementById("uploadedvideo").currentTime=time;
         }
       })
     } else if(self.state.link) {  //if the user is uploading a link this is triggered and posts the link to the backend

@@ -1,4 +1,5 @@
 var path = require('path')
+const CompressionPlugin = require('compression-webpack-plugin');
 var webpack = require('webpack')
 
 module.exports = {
@@ -23,6 +24,13 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|html)$/,
+    })
+  ],
   stats: {
     colors: true
   },
