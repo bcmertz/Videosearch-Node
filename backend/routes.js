@@ -130,42 +130,49 @@ router.post('/predict', function(req, res){  //the python server sends the image
     }, 1000)
   } else {
     console.log('predictionArray', predictionArray);
-    clari.models.predict(Clarifai.GENERAL_MODEL, predictionArray).then(
-      function(response) {
-        console.log('Number of outputs', response.outputs.length)
-        response.outputs.forEach(function(item){
-          console.log('Classification', item.data.concepts[0].name, 'Time', allKeys[counter].time);
-          predictions.push({classification : item.data.concepts[0].name, time: allKeys[counter].time})
-          counter++
-        })
-        var videodata = Frame({
-          predictions: predictions,
-          url: url
-        })
-        videodata.save(function(err){
-          if(err){
-            predictionArray = []
-            predictions = []
-            error = true
-            console.log('Error', err);
-          } else{
-            console.log('Data was saved')
-            predictionArray = []
-            predictions = []
-            ready = true
-            // return 'done'
-            res.send('success : true')
-          }
-        });
-      },
-      function(err) {
-        console.error('Error', err);
-        predictionArray = []
-        predictions = []
-        error = true
-        res.send('failed')
-      }
-    );
+    if(predictionArray.length>0){
+      clari.models.predict(Clarifai.GENERAL_MODEL, predictionArray).then(
+        function(response) {
+          console.log('Number of outputs', response.outputs.length)
+          response.outputs.forEach(function(item){
+            console.log('Classification', item.data.concepts[0].name, 'Time', allKeys[counter].time);
+            predictions.push({classification : item.data.concepts[0].name, time: allKeys[counter].time})
+            counter++
+          })
+          var videodata = Frame({
+            predictions: predictions,
+            url: url
+          })
+          videodata.save(function(err){
+            if(err){
+              predictionArray = []
+              predictions = []
+              error = true
+              console.log('Error', err);
+            } else{
+              console.log('Data was saved')
+              predictionArray = []
+              predictions = []
+              ready = true
+              // return 'done'
+              res.send('success : true')
+            }
+          });
+        },
+        function(err) {
+          console.error('Error', err);
+          predictionArray = []
+          predictions = []
+          error = true
+          res.send('failed')
+        }
+      );
+    } else {
+      predictionArray = []
+      predictions = []
+      error = true
+      res.send('failed')
+    }
   }
 })
 
