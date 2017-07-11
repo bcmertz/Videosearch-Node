@@ -273,7 +273,12 @@ class Main extends React.Component {
 
     return(
       <div style={{width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}>
-        {!this.state.ready && !this.state.loading ? <div>
+        {!this.state.ready && !this.state.loading ? <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
         <h1>SearchWithinVideo</h1>
         <p>Submit a youtube url or upload a video to get started</p>
         <form onSubmit={this.handleSubmit.bind(this)}>
