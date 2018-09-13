@@ -105,7 +105,7 @@ class Main extends React.Component {
   }
   handleYoutube(link){  //if a youtube link is submitted, we send that link to the appropriate backend route
     var self = this;
-    fetch('https://fierce-retreat-58228.herokuapp.com/youtube',{
+    fetch('https://sleepy-eyrie-31414.herokuapp.com//youtube',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -118,7 +118,7 @@ class Main extends React.Component {
       var timer = Date.now()  //assumes error and stops chekcing after a minute
       console.log('looking for result')
       var check = setInterval(function(){
-        fetch('https://fierce-retreat-58228.herokuapp.com/results')
+        fetch('https://sleepy-eyrie-31414.herokuapp.com/results')
         .then(function(response){
           return response.json()
         })
@@ -164,7 +164,7 @@ class Main extends React.Component {
   }
   handleMP4(url){ //if link submitted is an mp4, not finished route
     var self = this
-    fetch('https://fierce-retreat-58228.herokuapp.com/uploadurl',{
+    fetch('https://sleepy-eyrie-31414.herokuapp.com//uploadurl',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -176,7 +176,7 @@ class Main extends React.Component {
     .then(()=> {
       console.log('looking for result')
       var check = setInterval(function(){
-        fetch('https://fierce-retreat-58228.herokuapp.com/results')
+        fetch('https://sleepy-eyrie-31414.herokuapp.com/results')
         .then(function(response){
           return response.json()
         })
@@ -217,7 +217,7 @@ class Main extends React.Component {
     var tempUrl = signResult.publicUrl.slice(12,signResult.publicUrl.length)
     var url = 'https://s3-us-west-1.amazonaws.com/mybucket-bennettmertz/'+tempUrl
     console.log('url', url)
-    fetch('https://fierce-retreat-58228.herokuapp.com/uploadurl',{
+    fetch('https://sleepy-eyrie-31414.herokuapp.com/uploadurl',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -232,7 +232,7 @@ class Main extends React.Component {
       })
       console.log('looking for result')
       var check = setInterval(function(){
-        fetch('https://fierce-retreat-58228.herokuapp.com/results')
+        fetch('https://sleepy-eyrie-31414.herokuapp.com/results')
         .then(function(response){
           return response.json()
         })
