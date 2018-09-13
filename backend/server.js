@@ -12,6 +12,9 @@ app.use(express.static(path.join(__dirname, 'static')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
+app.use((req,res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+});
 app.use('/', routes);
 
 var server = app.listen(process.env.PORT || 3000, function () {
