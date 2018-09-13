@@ -105,7 +105,7 @@ class Main extends React.Component {
   }
   handleYoutube(link){  //if a youtube link is submitted, we send that link to the appropriate backend route
     var self = this;
-    fetch('https://sleepy-eyrie-31414.herokuapp.com//youtube',{
+    fetch('https://sleepy-eyrie-31414.herokuapp.com/youtube',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
@@ -164,7 +164,7 @@ class Main extends React.Component {
   }
   handleMP4(url){ //if link submitted is an mp4, not finished route
     var self = this
-    fetch('https://sleepy-eyrie-31414.herokuapp.com//uploadurl',{
+    fetch('https://sleepy-eyrie-31414.herokuapp.com/uploadurl',{
       method: 'post',
       headers: {
         "Content-Type": "application/json"
