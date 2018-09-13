@@ -206,7 +206,7 @@ router.post('/uploadurl', function(req, res){   //hit after frontend aws upload 
   var source = 'f'+req.body.url  //so python knows its file not a stream
   console.log('source',source)
   var options = {   //options to post to python
-    host: '172.31.40.234',
+    host: '18.212.143.146',
     port: 8080,
     method: 'POST',
     headers: {
@@ -240,7 +240,7 @@ router.post('/youtube', function(req, res){   //route for youtube link submissio
     var source = 'f'+url;
     console.log('source',source);
     var options = {
-      host: '172.31.40.234',
+      host: '18.212.143.146',
       port: 8080,
       method: 'POST',
       headers: {
