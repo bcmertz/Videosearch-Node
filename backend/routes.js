@@ -13,16 +13,20 @@ var Clarifai = require('clarifai');
 var youtubedl = require('youtube-dl')
 var fs = require('fs')
 
+//process.on('unhandledRejection', (reason, p) => {
+  //console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+  // application specific logging, throwing an error, or other logic here
+//});
+
 var s3 = new aws.S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 });
 
-var clari = new Clarifai.App(
-  process.env.id,
-  process.env.password
-);
-clari.getToken();
+const clari = new Clarifai.App({
+    apiKey: process.env.id
+});
+
 
 router.get('/', function(req,res){
   res.sendFile(path.join(__dirname, '../static/index.html'))  //for the mainpage send index.html which has out bundled app as a script inside
