@@ -24,7 +24,7 @@ var s3 = new aws.S3({
 });
 
 const clari = new Clarifai.App({
-    apiKey: process.env.id
+    apiKey: process.env.apiKey
 });
 
 
